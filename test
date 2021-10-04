@@ -1,0 +1,9 @@
+问题1：读取时拔掉网线，回导致进程阻塞。
+      尚不知道如何解决，recv_len=0xffffffff时卡机
+问题2：内存泄漏
+	finsconnection 332行增加
+    delete cpudata;//add by hanson
+	  delete [] addressWc;//add by hanson
+    
+问题3：readbit,与readword报文组装错误
+    应该时复制时忘记更正
